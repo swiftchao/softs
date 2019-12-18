@@ -25,7 +25,7 @@ shift
 
 :start_http
   title Start http process by port %PORT_TO_BE_KILLED% %CMD_LINE_ARGS%
-  set /p=Start http process by port %PORT_TO_BE_KILLED% %CMD_LINE_ARGS% -- <nul
+  set /p=Start http process by port %PORT_TO_BE_KILLED% %CMD_LINE_ARGS%
   (python -m SimpleHTTPServer %CMD_LINE_ARGS%) && (@echo  >OK & C:\Windows\System32\findstr.exe /a:A . OK*&del OK) || (@echo  >ERROR & C:\Windows\System32\findstr.exe /a:C . ERROR*&del ERROR)
 :eof
 
